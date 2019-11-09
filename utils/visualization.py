@@ -18,6 +18,7 @@ class display_images_per_class:
     def __call__(self,data):
       
       class_names=list(np.unique(data.labels))
+      num_classes=len(class_names)
 
       for i in range(self.no_times):
         

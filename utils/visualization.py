@@ -10,14 +10,21 @@ from matplotlib import pyplot as plt
 """
 class display_images_per_class:
 
-    def __init__(self,no_times=1,figsize=(8,3)):
+    def __init__(self,no_times=1,figsize=(8,3),class_names=None):
 
         self.no_times=no_times
         self.figsize=figsize
-        
+        self.class_names=class_names        
+    
     def __call__(self,data):
       
-      class_names=list(np.unique(data.labels))
+      if self.class_names is None:
+
+        class_names=list(np.unique(data.labels))
+      
+      else:
+        class_names=self.class_names
+
       num_classes=len(class_names)
 
       for i in range(self.no_times):

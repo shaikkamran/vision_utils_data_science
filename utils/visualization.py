@@ -15,7 +15,7 @@ class display_images_per_class:
         self.no_times=no_times
         self.figsize=figsize
         
-    def __call__(self,data.imgs,data.labels):
+    def __call__(self,data):
       
       class_names=list(np.unique(data.labels))
 
@@ -33,5 +33,5 @@ class display_images_per_class:
 
         plt.show()
 
-    
+
 

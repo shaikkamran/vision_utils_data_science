@@ -17,12 +17,11 @@ class display_images_per_class:
         self.class_names = class_names
 
     def __call__(self, data):
-
-      """
+        """
         
-            data contains data.imgs and data.labels 
-            data.labels must be always integers and data.imgs must always be np.array with astype int scaled [0-255]
-              
+        data contains data.imgs and data.labels 
+        data.labels must be always integers and data.imgs must always be np.array with astype int scaled [0-255]
+
       """
 
         if self.class_names is None:
